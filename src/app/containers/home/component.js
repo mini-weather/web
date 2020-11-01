@@ -2,8 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import {
     getCurrent,
-    getCurrentPending,
-    getCurrentError
+    getCurrentPending
 } from '../../reducers/current';
 import ForecastResource from '../../resources/forecast';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -20,17 +19,16 @@ class Home extends React.Component {
         const now = new Date();
         const timeString = now.toLocaleString('en-GB').split(', ');
         this.setState({
-            'date': timeString[0],
             'time': timeString[1].slice(0, timeString[1].lastIndexOf(':')),
             'weekDay': WEEK_DAYS[now.getDay()]
         })
     }
     render() {
         const {
-            current, pending, error
+            current, pending
         } = this.props;
         const {
-            date, time, weekDay
+            time, weekDay
         } = this.state;
         let upCommingTime = '';
         let upCommingLabel = '';
@@ -63,7 +61,7 @@ class Home extends React.Component {
                     </div>
                     <span className="spacer"></span>
                     <div className="iconBox">
-                        <img src={require('../../../static/icons/condition/' + current['condition'] + (current['is_day'] ? '_day.svg' : '_night.svg'))} />
+                        <img alt='condition' src={require('../../../static/icons/condition/' + current['condition'] + (current['is_day'] ? '_day.svg' : '_night.svg'))} />
                     </div>
                     <span className="spacer"></span>
                     <div className="moreInfoBox">
@@ -74,12 +72,12 @@ class Home extends React.Component {
                     <span className="spacer"></span>
                     <div className="bottomBox">
                         <div className="bottomItem">
-                            <img className="icon" src={require('../../../static/icons/sunrise.svg')} />
+                            <img alt='astro' className="icon" src={require('../../../static/icons/sunrise.svg')} />
                             <span className="title">{upCommingLabel}</span>
                             <span className="value">{upCommingTime}</span>
                         </div>
                         <div className="bottomItem">
-                            <img className="icon" src={require('../../../static/icons/wind.svg')} />
+                            <img alt='wind' className="icon" src={require('../../../static/icons/wind.svg')} />
                             <span className="title">WIND</span>
 
                             <span className="value">{current['wind_kph']}
@@ -87,7 +85,7 @@ class Home extends React.Component {
                             </span>
                         </div>
                         <div className="bottomItem">
-                            <img className="icon" src={require('../../../static/icons/temp.svg')} />
+                            <img alt='feels-like' className="icon" src={require('../../../static/icons/temp.svg')} />
                             <span className="title">FEELS LIKE</span>
                             <span className="value">{current['feelslike_c']}
                                 <span className="unit">C</span>
