@@ -2,11 +2,12 @@ FROM finizco/nginx-node AS core
 
 WORKDIR /app
 
-COPY package.json package-lock.json node_modules ./
+COPY package.json package-lock.json ./
 
 COPY . .
 
-FROM core as builder 
+FROM core as builder
+RUN npm install 
 RUN npm run-script build
 
 FROM nginx:1.19.3 as static
