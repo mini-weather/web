@@ -8,7 +8,7 @@ COPY . .
 
 FROM core as builder
 RUN npm install 
-RUN npm run-script build
+RUN npm run build
 
 FROM nginx:1.19.3 as static
 COPY nginx.conf /etc/nginx/conf.d/default.conf
