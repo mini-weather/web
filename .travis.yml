@@ -8,6 +8,8 @@ services:
   - docker
 script:
   - docker build -t miniweather_web .
-  - docker images
+  - docker tag miniweather_web thesinner/miniweather_web
+  - docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
+  - docker push thesinner/miniweather_web
 on:
   branch: master
