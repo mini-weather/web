@@ -114,7 +114,8 @@
             align-items: center;
             justify-content: center;
 
-            .icon {
+            svg {
+                width: 2rem;
                 height: 2rem;
             }
 
@@ -148,7 +149,8 @@
     align-items: center;
     justify-content: center;
 
-    img {
+    svg {
         height: 8rem;
+        width: 10rem;
     }
 }

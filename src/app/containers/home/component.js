@@ -9,6 +9,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { CONDITIONS } from '../../constants/conditions';
 import { WEEK_DAYS } from '../../constants/index';
 import { getLocalTime } from '../../utils/date';
+import { Icon } from '../../components/icon/component';
 
 import './component.scss'
 
@@ -46,7 +47,7 @@ class Home extends React.Component {
                 { pending && <div className="loadingPlate">
                     <CircularProgress />
                 </div>}
-                { current != null && <div className="currentPlate">
+                { current != null && <div className={("currentPlate condition" + current['condition'] + (current['is_day'] ? ' day' : ' night'))}>
                     <span className="spacer"></span>
                     <span className="spacer"></span>
                     <div className="topBox">
@@ -61,7 +62,7 @@ class Home extends React.Component {
                     </div>
                     <span className="spacer"></span>
                     <div className="iconBox">
-                        <img alt='condition' src={require('../../../static/icons/condition/' + current['condition'] + (current['is_day'] ? '_day.svg' : '_night.svg'))} />
+                        <Icon name={'condition/' + current['condition'] + (current['is_day'] ? '-day' : '-night')}></Icon>
                     </div>
                     <span className="spacer"></span>
                     <div className="moreInfoBox">
@@ -72,12 +73,12 @@ class Home extends React.Component {
                     <span className="spacer"></span>
                     <div className="bottomBox">
                         <div className="bottomItem">
-                            <img alt='astro' className="icon" src={require('../../../static/icons/sunrise.svg')} />
+                            <Icon name='sunrise' />
                             <span className="title">{upCommingLabel}</span>
                             <span className="value">{upCommingTime}</span>
                         </div>
                         <div className="bottomItem">
-                            <img alt='wind' className="icon" src={require('../../../static/icons/wind.svg')} />
+                            <Icon name='wind' />
                             <span className="title">WIND</span>
 
                             <span className="value">{current['wind_kph']}
@@ -85,7 +86,7 @@ class Home extends React.Component {
                             </span>
                         </div>
                         <div className="bottomItem">
-                            <img alt='feels-like' className="icon" src={require('../../../static/icons/temp.svg')} />
+                            <Icon name='temp' />
                             <span className="title">FEELS LIKE</span>
                             <span className="value">{current['feelslike_c']}
                                 <span className="unit">C</span>
