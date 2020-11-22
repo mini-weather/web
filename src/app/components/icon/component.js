@@ -22,8 +22,6 @@ export const Icon = ({ name, ...rest }) => {
         };
         importIcon();
     }, [name]);
-    console.log(loading)
-    console.log(ImportedIconRef.current)
     if (!loading && ImportedIconRef.current) {
         const { current: ImportedIcon } = ImportedIconRef;
 

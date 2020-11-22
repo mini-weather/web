@@ -1,0 +1,363 @@
+@import '../../styles/stylesVariables.scss';
+
+.currentPlate {
+
+    &.condition1000 {
+        &.day {
+            background-color: $sunnyBackgroundColor;
+
+            .topBox {
+                .cityName {
+                    color: $sunnyTextColor;
+
+                }
+
+                .dateTimeInfo {
+                    .dateInfo {
+                        .weekday {
+                            color: $sunnyTextColor;
+                        }
+
+                        .date {
+                            color: $sunnyTextColor;
+                        }
+
+                        .time {
+                            color: $sunnyTextColor;
+
+                        }
+                    }
+
+
+                }
+            }
+
+            .moreInfoBox {
+
+                .temp {
+                    color: $sunnyTextColor;
+                }
+
+                .conditionText {
+                    color: $sunnyTextColor;
+                }
+            }
+
+            .bottomBox {
+                .bottomItem {
+                    svg {
+                        fill: $sunnyTextColor;
+                    }
+
+                    .title {
+                        color: $sunnyTextColor;
+                    }
+
+                    .value {
+                        color: $sunnyTextColor;
+                    }
+                }
+            }
+
+            .iconBox {
+                svg {
+                    fill: $sunnyTextColor;
+                }
+            }
+        }
+
+        &.night {
+            background-color: $clearBackgroundColor;
+
+            .topBox {
+                .cityName {
+                    color: $clearTextColor;
+
+                }
+
+                .dateTimeInfo {
+                    .dateInfo {
+                        .weekday {
+                            color: $clearTextColor;
+                        }
+
+                        .date {
+                            color: $clearTextColor;
+                        }
+
+                        .time {
+                            color: $clearTextColor;
+
+                        }
+                    }
+
+
+                }
+            }
+
+            .moreInfoBox {
+
+                .temp {
+                    color: $clearTextColor;
+                }
+
+                .conditionText {
+                    color: $clearTextColor;
+                }
+            }
+
+            .bottomBox {
+                .bottomItem {
+                    svg {
+                        fill: $clearTextColor;
+                    }
+
+                    .title {
+                        color: $clearTextColor;
+                    }
+
+                    .value {
+                        color: $clearTextColor;
+                    }
+                }
+            }
+
+            .iconBox {
+                svg {
+                    fill: $clearTextColor;
+                }
+            }
+        }
+    }
+
+    &.condition1003,
+    &.condition1006,
+    &.condition1009,
+    &.condition1030 {
+        &.day {
+            background-color: $mistDayBackgroundColor;
+
+            .topBox {
+                .cityName {
+                    color: $mistDayTextColor;
+
+                }
+
+                .dateTimeInfo {
+                    .dateInfo {
+                        .weekday {
+                            color: $mistDayTextColor;
+                        }
+
+                        .date {
+                            color: $mistDayTextColor;
+                        }
+
+                        .time {
+                            color: $mistDayTextColor;
+
+                        }
+                    }
+
+
+                }
+            }
+
+            .moreInfoBox {
+
+                .temp {
+                    color: $mistDayTextColor;
+                }
+
+                .conditionText {
+                    color: $mistDayTextColor;
+                }
+            }
+
+            .bottomBox {
+                .bottomItem {
+                    svg {
+                        fill: $mistDayTextColor;
+                    }
+
+                    .title {
+                        color: $mistDayTextColor;
+                    }
+
+                    .value {
+                        color: $mistDayTextColor;
+                    }
+                }
+            }
+
+            .iconBox {
+                svg {
+                    fill: $mistDayTextColor;
+                }
+            }
+        }
+
+        &.night {
+            background-color: $mistNightBackgroundColor;
+
+            .topBox {
+                .cityName {
+                    color: $mistNightTextColor;
+
+                }
+
+                .dateTimeInfo {
+                    .dateInfo {
+                        .weekday {
+                            color: $mistNightTextColor;
+                        }
+
+                        .date {
+                            color: $mistNightTextColor;
+                        }
+
+                        .time {
+                            color: $mistNightTextColor;
+
+                        }
+                    }
+
+
+                }
+            }
+
+            .moreInfoBox {
+
+                .temp {
+                    color: $mistNightTextColor;
+                }
+
+                .conditionText {
+                    color: $mistNightTextColor;
+                }
+            }
+
+            .bottomBox {
+                .bottomItem {
+                    svg {
+                        fill: $mistNightTextColor;
+                    }
+
+                    .title {
+                        color: $mistNightTextColor;
+                    }
+
+                    .value {
+                        color: $mistNightTextColor;
+                    }
+                }
+            }
+
+            .iconBox {
+                svg {
+                    fill: $mistNightTextColor;
+                }
+            }
+        }
+    }
+
+}
+
+$mistDayBackgroundColor: #606056;
+$mistDayTextColor: #FFFFFF;
+
+$mistNightBackgroundColor: #4D4D45;
+$mistNightTextColor: #FFFFFF;
+
+$drizzleDayBackgroundColor: #8cb5b7;
+$drizzleDayTextColor: #000000;
+
+$drizzleNightBackgroundColor: #649b9e;
+$drizzleNightTextColor: #FFFFFF;
+
+$snowDayBackgroundColor: #FFFAFA;
+$snowDayTextColor: #677682;
+
+$snowNightBackgroundColor: #FFFAFA;
+$snowNightTextColor: #677682;
+
+$rainDayBackgroundColor: #0077be;
+$rainDayTextColor: #FFFFFF;
+
+$rainNightBackgroundColor: #004772;
+$rainNightTextColor: #FFFFFF;
+
+$iceDayBackgroundColor: #b9e8ea;
+$iceDayTextColor: #677682;
+
+$iceNightBackgroundColor: #199ca6;
+$iceNightTextColor: #FFFFFF;
+
+@media (prefers-color-scheme: dark) {
+    .currentPlate {
+
+        &.day,
+        &.night {
+            background-color: $darkBackgroundColor !important;
+
+            .topBox {
+                .cityName {
+                    color: $darkTextColor !important;
+
+                }
+
+                .dateTimeInfo {
+                    .dateInfo {
+                        .weekday {
+                            color: $darkTextColor !important;
+                        }
+
+                        .date {
+                            color: $darkTextColor !important;
+                        }
+
+                        .time {
+                            color: $darkTextColor !important;
+
+                        }
+                    }
+
+
+                }
+            }
+
+            .moreInfoBox {
+
+                .temp {
+                    color: $darkTextColor !important;
+                }
+
+                .conditionText {
+                    color: $darkTextColor !important;
+                }
+            }
+
+            .bottomBox {
+                .bottomItem {
+                    svg {
+                        fill: $darkTextColor !important;
+                    }
+
+                    .title {
+                        color: $darkTextColor !important;
+                    }
+
+                    .value {
+                        color: $darkTextColor !important;
+                    }
+                }
+            }
+
+            .iconBox {
+                svg {
+                    fill: $darkTextColor !important;
+                }
+            }
+        }
+    }
+}

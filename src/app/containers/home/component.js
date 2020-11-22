@@ -12,6 +12,7 @@ import { getLocalTime } from '../../utils/date';
 import { Icon } from '../../components/icon/component';
 
 import './component.scss'
+import './colors.scss'
 
 class Home extends React.Component {
     componentWillMount() {
